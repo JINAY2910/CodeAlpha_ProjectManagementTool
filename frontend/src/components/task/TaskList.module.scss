@@ -1,0 +1,79 @@
+.topBar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+}
+
+.addNew {
+  background: var(--accent-brand);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  &:hover {
+    background: #4f46e5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  }
+}
+
+.addNewForm {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 3rem;
+  background: var(--bg-surface);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  
+  input {
+    flex: 1;
+    padding: 1.2rem 1.6rem;
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+    &:focus {
+      border-color: var(--accent-brand);
+      box-shadow: none;
+    }
+  }
+
+  button[type='submit'] {
+    background: var(--text-primary);
+    color: var(--bg-main);
+    padding: 0 2.4rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &:hover {
+      background: white;
+      transform: scale(1.02);
+    }
+  }
+}
+
+.taskListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.noTask {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.4rem;
+  padding: 4rem;
+  background: var(--bg-surface);
+  border-radius: 16px;
+  border: 1px dashed var(--border-color);
+}

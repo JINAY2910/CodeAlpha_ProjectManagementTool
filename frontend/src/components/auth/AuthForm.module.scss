@@ -1,0 +1,130 @@
+.register, .login {
+  flex: 1;
+  background: var(--bg-surface);
+  padding: 4rem;
+  border-radius: 24px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.4);
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2.4rem;
+  color: var(--text-primary);
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  input {
+    margin-top: 0.8rem;
+    padding: 1.2rem 1.6rem;
+    font-size: 1.4rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.2);
+    }
+
+    &:focus {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: var(--accent-brand);
+      box-shadow: none;
+    }
+  }
+
+  button[type='submit'] {
+    margin-top: 1rem;
+    padding: 1.4rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: white;
+    background: var(--accent-brand);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: #4f46e5;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(99, 102, 241, 0.2);
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
+
+.toggleText {
+  margin-top: 2.4rem;
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+}
+
+.toggleLink {
+  color: var(--accent-brand);
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  
+  &:hover {
+    color: #818cf8;
+    text-decoration: underline;
+  }
+}
+
+.adminAccessRow {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.adminAccessLink {
+  display: block;
+  width: 100%;
+  padding: 1.4rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  background: var(--bg-surface);
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: var(--danger);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(220, 38, 38, 0.2);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
