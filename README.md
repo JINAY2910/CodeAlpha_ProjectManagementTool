@@ -1,23 +1,49 @@
 # Task Management Tool
 
-A modern task management application built using the MERN stack (MongoDB, Express, React, Node.js).
-
-## Project Structure
-
-- **`backend`**: Node.js & Express server connected to MongoDB.
-- **`frontend`**: React client built with Vite.
+A modern, full-stack task management application featuring secure user authentication, profile customization, notification systems, and a fully featured administrative dashboard.
 
 ---
 
-## Prerequisites
+## 🚀 Features
 
-Before running the application, make sure you have:
-- [Node.js](https://nodejs.org/) installed (v16+ recommended).
-- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) or a local MongoDB instance.
+### **User Portal**
+- **Security**: Complete signup and login system secured using bcrypt password hashing and JSON Web Tokens (JWT).
+- **Task Management**: Create, view, update, and delete personalized tasks.
+- **Real-Time Notifications**: Receive live alerts and broadcasted updates from administrators.
+- **Profile Customization**: Edit profile details and update account configurations.
+
+### **Admin Portal**
+- **Admin Dashboard**: Specialized interface for managing application-wide actions.
+- **User Management**: View and monitor registered users in the workspace.
+- **Broadcasting Engine**: Broadcast urgent announcements, custom messages, or bulk tasks directly to all users simultaneously.
 
 ---
 
-## Setup & Running Instructions
+## 🛠️ Tech Stack
+
+- **Frontend**: React, Vite, Sass (SCSS) Modules, React Router, React Hot Toast
+- **Backend**: Node.js, Express.js, JWT, Cookie Parser, Cors, Morgan
+- **Database**: MongoDB & Mongoose ORM
+
+---
+
+## 🔑 Demo Credentials (For Testing)
+
+To log in and experience the administrative capabilities of the application:
+- **Role**: Administrator
+- **Email**: `admin123@gmail.com`
+- **Password**: `admin123`
+
+---
+
+## 📦 Project Structure
+
+- **`backend`**: Node.js & Express server connected to MongoDB Atlas.
+- **`frontend`**: React client built and bundled with Vite.
+
+---
+
+## ⚙️ Setup & Running Instructions
 
 ### 1. Backend Server Setup
 
@@ -29,18 +55,18 @@ Before running the application, make sure you have:
    ```bash
    npm install
    ```
-3. Check the `.env` file configuration (a default configuration is already provided):
+3. Create or configure your `.env` file in the `backend` directory:
    ```env
    PORT=8000
    DB_CONNECTION_STRING=your_mongodb_connection_string
    JWT_SECRET=your_jwt_secret
-   CLIENT_URL=http://localhost:3000, http://localhost:3001
+   CLIENT_URL=http://localhost:3000
    ```
 4. Start the backend development server:
    ```bash
    npm run dev
    ```
-   The backend server will run on `http://localhost:8000` and automatically connect to the MongoDB instance.
+   The backend server will run on `http://localhost:8000` and automatically connect to MongoDB.
 
 ### 2. Frontend Client Setup
 
@@ -52,7 +78,7 @@ Before running the application, make sure you have:
    ```bash
    npm install
    ```
-3. Check the `.env` file configuration (a default configuration is already provided):
+3. Create or configure your `.env` file in the `frontend` directory:
    ```env
    VITE_API_BASE_URL=http://localhost:8000/api
    ```
@@ -64,7 +90,7 @@ Before running the application, make sure you have:
 
 ---
 
-## Troubleshooting
+## ⚠️ Troubleshooting
 
 - **Error: `TypeError: Cannot read properties of undefined (reading 'prototype')` (in `buffer-equal-constant-time`)**
   - **Cause**: Node.js v25+ removed `SlowBuffer`, which crashed older versions of `jsonwebtoken` (v8).
